@@ -1,0 +1,14 @@
+---
+driver_plugin: vagrant
+driver_config:
+  provisioner: cfengine
+
+platforms:
+- name: debian-wheezy-x64-nocm
+  driver_config:
+    box: debian-wheezy-x64-nocm
+    box_url: http://puppet-vagrant-boxes.puppetlabs.com/debian-70rc1-x64-vbox4210-nocm.box
+
+suites:
+- name: default
+  bundle_list: ["cfengine/nginx_test.cf", "cfengine/nginx.cf"]

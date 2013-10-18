@@ -1,0 +1,16 @@
+body common control
+{
+  bundlesequence => { "install_nginx" };
+  inputs => { "/var/cfengine/share/CoreBase/libraries/cfengine_stdlib.cf" };
+}
+
+bundle agent install_nginx
+{
+  packages:
+    "nginx"
+      package_policy => "add",
+      package_method => generic;
+
+  commands:
+      "/etc/init.d/nginx restart";
+}

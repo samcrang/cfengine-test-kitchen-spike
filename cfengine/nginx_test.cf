@@ -1,0 +1,13 @@
+body common control
+{
+  bundlesequence => { "install_nginx_test" };
+  inputs => { "/var/cfengine/share/CoreBase/libraries/cfengine_stdlib.cf" };
+}
+
+bundle agent install_nginx_test
+{
+  packages:
+    "ruby"
+      package_policy => "add",
+      package_method => generic;
+}
