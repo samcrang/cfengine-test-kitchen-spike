@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/samcrang/test-kitchen.git
-  revision: 830327e6d37d1529fa5498ff7777cc569adc5b9c
+  revision: 12e2e436d0b53861ff606fdf6c24def5af275f17
   branch: spike_cfengine
   specs:
     test-kitchen (1.0.0.dev)
@@ -23,10 +23,6 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    busser (0.4.1)
-      thor
-    busser-minitest (0.2.0)
-      busser
     celluloid (0.15.2)
       timers (~> 1.1.0)
     coderay (1.0.9)
@@ -48,6 +44,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  busser-minitest (~> 0.2.0)
   kitchen-vagrant!
   test-kitchen!
